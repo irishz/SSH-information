@@ -4,9 +4,9 @@
     margin-top: 20px; 
 }
 
-ion-col{
+#col{
     align-items: center;
-    text-align: center;
+    text-align: left;
 }
 
 #pass-word{
@@ -14,7 +14,19 @@ ion-col{
 }
 
 #bg{
-    background-image: url('/assets/imgs/hospital.jpg');
+    background-image: url('/assets/imgs/hospital2.jpg');
     background-position: center;
     background-size: cover;
+}
+
+#logo{
+    margin-bottom: 30px;
+}
+
+.item.item-input {
+    background-color: transparent;
+}
+
+.text-input{
+    color: #ffffff;
 }

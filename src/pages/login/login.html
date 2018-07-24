@@ -1,15 +1,15 @@
 <ion-content id="bg" padding>
 	<ion-grid style="height: 100%">
 		<ion-row justify-content-center align-items-center style="height: 100%">	
-			<ion-col col-10>
-					<h1 id="logo">SSH-Information (icon)</h1>
+			<ion-col id="col" col-10>
+					<img id="logo" src="assets/imgs/ssh-logo.png" alt="ssh-logo">
 				<ion-item>
-					<ion-label floating>Email Address</ion-label>
+					<ion-label color="primary" floating>Email Address</ion-label>
 					<ion-input type="text" [(ngModel)]="user.email"></ion-input>
 				</ion-item>
 			
 				<ion-item id="pass-form">
-					<ion-label floating>Password</ion-label>
+					<ion-label color="primary" floating>Password</ion-label>
 					<ion-input type="password" [(ngModel)]="user.password"></ion-input>
 				</ion-item>
 				

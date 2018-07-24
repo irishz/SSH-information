@@ -9,6 +9,7 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class HomePage {
 
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private afAuth: AngularFireAuth) {
 
   }

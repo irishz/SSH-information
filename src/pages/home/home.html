@@ -1,15 +1,21 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>SSH-Inforamtion App</ion-title>
+    <ion-title center>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to SSH-Inforamtion App</h2>
-  <img src="" alt="">
-  <p>
-    some label.
-  </p>
-
-  <button ion-button (click)="goTab()">Continue</button>
-</ion-content>
+<ion-card>
+  <img src="assets/imgs/logo.png" />
+  <ion-card-content>
+    <ion-card-title>
+      Welcome...
+    </ion-card-title>
+    <p>
+      This application will show information in our hospital.
+    </p>
+  </ion-card-content>
+  
+</ion-card>
+<button ion-button large clear icon-end color="primary" (click)="goTab()">
+  Continue
+<ion-icon name="arrow-forward"></ion-icon>
