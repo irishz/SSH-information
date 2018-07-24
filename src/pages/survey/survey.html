@@ -1,0 +1,23 @@
+<!--
+  Generated template for the SurveyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content padding>
+
+  <h2>Satisfaction Survey</h2>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Comment</ion-label>
+      <ion-textarea  id="textarea" type="text" #newContent></ion-textarea>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button outline color="dark" (click)="submit(newContent.value)">Submit</button>
+</ion-content>

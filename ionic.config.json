@@ -1,0 +1,8 @@
+{
+  "name": "SSH-information",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

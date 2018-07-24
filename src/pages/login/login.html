@@ -1,0 +1,21 @@
+<ion-content id="body" padding>
+	<ion-grid>
+		<ion-row center>
+			<ion-col>
+					<h1 id="logo">SSH-Information</h1>
+					<ion-item>
+						<ion-label floating>Email Address</ion-label>
+						<ion-input type="text" [(ngModel)]="user.email"></ion-input>
+					</ion-item>
+				
+					<ion-item id="pass-form">
+						<ion-label floating>Password</ion-label>
+						<ion-input type="password" [(ngModel)]="user.password"></ion-input>
+					</ion-item>
+				
+					<button id="btnGroup" ion-button color="primary" (click)="login(user)"outline>Login</button>
+					<button id="btnGroup" ion-button color="danger" (click)="register()" outline>Sign Up</button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>
