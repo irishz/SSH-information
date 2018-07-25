@@ -5,12 +5,13 @@
 					<img id="logo" src="assets/imgs/ssh-logo.png" alt="ssh-logo">
 				<ion-item>
 					<ion-label color="primary" floating>Email Address</ion-label>
-					<ion-input type="text" [(ngModel)]="user.email"></ion-input>
+					<ion-input id="login-input" type="text" [(ngModel)]="user.email"></ion-input>
 				</ion-item>
 			
 				<ion-item id="pass-form">
-					<ion-label color="primary" floating>Password</ion-label>
-					<ion-input type="password" [(ngModel)]="user.password"></ion-input>
+					<ion-label c
+					olor="primary" floating>Password</ion-label>
+					<ion-input id="login-input" type="password" [(ngModel)]="user.password"></ion-input>
 				</ion-item>
 				
 				<button id="btnGroup" ion-button color="primary" (click)="login(user)"outline round>Login</button>
