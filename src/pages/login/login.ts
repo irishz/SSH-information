@@ -35,7 +35,6 @@ export class LoginPage {
   async login(user: User) {
     this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password)
       .then(data => {
-        this.alert('Success You re\' logged in');
         this.navCtrl.setRoot(HomePage);
       })
       .catch(error => {
