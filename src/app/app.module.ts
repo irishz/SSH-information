@@ -13,6 +13,9 @@ import { EmployeePage } from '../pages/employee/employee';
 import { InformationPage } from '../pages/information/information';
 import { SurveyPage } from '../pages/survey/survey';
 import { EmployeeDetailPage } from '../pages/employee-detail/employee-detail';
+import { HistoryPage } from './../pages/history/history';
+import { MottoPage } from './../pages/motto/motto';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -33,7 +36,9 @@ import { AuthProvider } from '../providers/auth/auth';
     EmployeePage,
     InformationPage,
     SurveyPage,
-    EmployeeDetailPage
+    EmployeeDetailPage,
+    HistoryPage,
+    MottoPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +58,9 @@ import { AuthProvider } from '../providers/auth/auth';
     EmployeePage,
     InformationPage,
     SurveyPage,
-    EmployeeDetailPage
+    EmployeeDetailPage,
+    HistoryPage,
+    MottoPage
   ],
   providers: [
     StatusBar,

@@ -14,8 +14,26 @@
 
 
 <ion-content padding>
-  <p>ประวัติโรงพยาบาลสุขสวัสดิ์</p>
-  <p>Motto 6 ข้อ</p>
-  <p>กฎระเบียบของโรงพยาบาล</p>
-  <p>สวัสดิการพนักงาน</p>
+  <ion-list>
+    <button ion-item (click)="goHistory()">
+      <p>ประวัติโรงพยาบาลสุขสวัสดิ์</p>
+      <ion-icon name="arrow-dropright" item-end></ion-icon>
+    </button> 
+    <button ion-item (click)="goMotto()">
+      <p>Motto 6 ข้อ</p>
+      <ion-icon name="arrow-dropright" item-end></ion-icon>
+    </button>
+    <button ion-item>
+      <p>กฎระเบียบของโรงพยาบาล</p>
+      <ion-icon name="arrow-dropright" item-end></ion-icon>
+    </button>
+    <button ion-item>
+      <p>สวัสดิการพนักงาน</p>
+      <ion-icon name="arrow-dropright" item-end></ion-icon>
+    </button>
+    <button ion-item>
+      <p>คู่มือ iMed สำหรับแพทย์</p>
+      <ion-icon name="arrow-dropright" item-end></ion-icon>
+    </button>
+  </ion-list>
 </ion-content>

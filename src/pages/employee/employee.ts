@@ -2,7 +2,7 @@ import { EmployeeDetailPage } from './../employee-detail/employee-detail';
 import { Observable } from 'rxjs/Observable';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
-import { AngularFireDatabase, AngularFireList } from '../../../node_modules/angularfire2/database';
+import { AngularFireDatabase } from '../../../node_modules/angularfire2/database';
 
 
 @IonicPage()
