@@ -35,8 +35,12 @@
       <p>คู่มือ iMed สำหรับแพทย์</p>
       <ion-icon name="arrow-dropright" item-end></ion-icon>
     </button>
-    <button ion-item>
-      <p>รวม Link</p>
+    <button ion-item (click)="inlink()">
+      <p>รวม Link ข้อมูลข่าวสารภายในโรงพยาบาล</p>
+      <ion-icon name="arrow-dropright" item-end></ion-icon>
+    </button>
+    <button ion-item (click)="outlink()">
+      <p>รวม Link ข้อมูลข่าวสารภายนอกโรงพยาบาล</p>
       <ion-icon name="arrow-dropright" item-end></ion-icon>
     </button>
   </ion-list>

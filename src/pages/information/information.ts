@@ -1,3 +1,5 @@
+import { OutLinkPage } from './../out-link/out-link';
+import { InLinkPage } from './../in-link/in-link';
 import { MottoPage } from './../motto/motto';
 import { HistoryPage } from './../history/history';
 import { Component } from '@angular/core';
@@ -40,6 +42,14 @@ export class InformationPage {
     });
     toast.present();
     this.navCtrl.push(MottoPage);
+  }
+
+  inlink(){
+    this.navCtrl.push(InLinkPage);
+  }
+
+  outlink(){
+    this.navCtrl.push(OutLinkPage);
   }
 
 }

@@ -1,3 +1,4 @@
+import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -24,6 +25,7 @@ export class RegisterPage {
       subTitle: message,
       buttons: ['OK']
     }).present();
+    this.navCtrl.push(LoginPage);
   }
 
   async register(user: User) {

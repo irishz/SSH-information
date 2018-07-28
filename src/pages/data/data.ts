@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AngularFireDatabase } from '../../../node_modules/angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 
 
@@ -12,9 +11,9 @@ import { Observable } from 'rxjs/Observable';
 export class DataPage {
   items: Observable<any[]>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
     // query
-    this.items = db.list('/data-doctor').valueChanges();
+    // this.items = db.list('/data-doctor').valueChanges();
   }
 
   ionViewDidLoad() {

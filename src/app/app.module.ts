@@ -1,4 +1,4 @@
-import { FIREBASE_CONFIG } from './app.firebase.config';
+import { config } from './app.firebase.config';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -15,7 +15,8 @@ import { SurveyPage } from '../pages/survey/survey';
 import { EmployeeDetailPage } from '../pages/employee-detail/employee-detail';
 import { HistoryPage } from './../pages/history/history';
 import { MottoPage } from './../pages/motto/motto';
-
+import { OutLinkPage } from './../pages/out-link/out-link';
+import { InLinkPage } from './../pages/in-link/in-link';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -38,12 +39,14 @@ import { AuthProvider } from '../providers/auth/auth';
     SurveyPage,
     EmployeeDetailPage,
     HistoryPage,
-    MottoPage
+    MottoPage,
+    OutLinkPage,
+    InLinkPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireModule.initializeApp(config),
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
@@ -60,7 +63,9 @@ import { AuthProvider } from '../providers/auth/auth';
     SurveyPage,
     EmployeeDetailPage,
     HistoryPage,
-    MottoPage
+    MottoPage,
+    OutLinkPage,
+    InLinkPage
   ],
   providers: [
     StatusBar,
