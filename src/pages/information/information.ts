@@ -1,3 +1,4 @@
+import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer';
 import { OutLinkPage } from './../out-link/out-link';
 import { InLinkPage } from './../in-link/in-link';
 import { MottoPage } from './../motto/motto';
@@ -19,7 +20,14 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 })
 export class InformationPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl:ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl:ToastController, private document: DocumentViewer) {
+  }
+
+  openLocalPdf() {
+    const options: DocumentViewerOptions = {
+      title: 'My PDF'
+    }
+    this.document.viewDocument('./assets/Doctor.pdf', 'application/pdf', options);
   }
 
   ionViewDidLoad() {

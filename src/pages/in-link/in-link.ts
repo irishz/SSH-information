@@ -1,5 +1,7 @@
+import { Observable } from 'rxjs/Observable';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AngularFireDatabase } from '../../../node_modules/angularfire2/database';
 
 /**
  * Generated class for the InLinkPage page.
@@ -14,8 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'in-link.html',
 })
 export class InLinkPage {
+  maLinks: Observable<any[]>;
+  itLinks: Observable<any[]>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private db:AngularFireDatabase) {
+
+    this.maLinks = this.db.list('ma-link').valueChanges();
+    this.itLinks = this.db.list('it-link').valueChanges();
+
   }
 
   ionViewDidLoad() {

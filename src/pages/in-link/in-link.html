@@ -14,7 +14,13 @@
 
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>list1</ion-item>
+  <!-- MA link -->
+  <ion-list-header>Maintanence Link
+    <ion-icon name="hammer"></ion-icon>
+  </ion-list-header>
+  <ion-list *ngFor="let maLink of maLinks | async">
+    <a ion-item href="{{maLink.url}}" text-wrap>
+      {{maLink.title}}
+    </a>
   </ion-list>
 </ion-content>

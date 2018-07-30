@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Information</ion-title>
+    <ion-title><ion-icon name="information-circle"></ion-icon> Information</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -31,7 +31,7 @@
       <p>สวัสดิการพนักงาน</p>
       <ion-icon name="arrow-dropright" item-end></ion-icon>
     </button>
-    <button ion-item>
+    <button ion-item (click)="openLocalPdf()">
       <p>คู่มือ iMed สำหรับแพทย์</p>
       <ion-icon name="arrow-dropright" item-end></ion-icon>
     </button>
