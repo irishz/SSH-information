@@ -20,7 +20,7 @@
   </ion-list-header>
   <ion-list *ngFor="let maLink of maLinks | async">
     <a ion-item href="{{maLink.url}}" text-wrap>
-      {{maLink.title}}
+      <u>{{maLink.title}}</u>
     </a>
   </ion-list>
 </ion-content>

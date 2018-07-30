@@ -27,7 +27,7 @@ export class InformationPage {
     const options: DocumentViewerOptions = {
       title: 'My PDF'
     }
-    this.document.viewDocument('./assets/Doctor.pdf', 'application/pdf', options);
+    this.document.viewDocument('assets/Doctor.pdf', 'application/pdf', options);
   }
 
   ionViewDidLoad() {
