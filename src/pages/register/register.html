@@ -8,15 +8,40 @@
 
 
 <ion-content padding>
-  <ion-item>
+  <!-- <ion-item>
 		<ion-label floating>Email Address</ion-label>
-		<ion-input type="text" [(ngModel)]="user.email" ></ion-input>
-	</ion-item>
+		<ion-input id="input-regis" type="text" [(ngModel)]="user.email" ></ion-input>
+  </ion-item>
 
 	<ion-item>
 		<ion-label floating>Password</ion-label>
 		<ion-input type="password" [(ngModel)]="user.password" ></ion-input>
   </ion-item>
   
-  <button ion-button color="light" (click)="register(user)">Register</button>
+  <button ion-button color="light" (click)="register(user)">Register</button> -->
+
+  <form [formGroup]="formgroup">
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Email Address</ion-label>
+        <ion-input type="text" [formControl]="formgroup.controls['email']" [(ngModel)]="user.email"></ion-input>
+      </ion-item>
+      <div padding>
+        <p id="err-msg" *ngIf="email.hasError('required') && email.touched">*Email is required</p>
+        <p id="err-msg" *ngIf="formgroup.controls['email'].errors && formgroup.controls['email'].dirty">*Please use suksawat hospital email(example@suksawathospital.com)</p>
+      </div>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" [formControl]="formgroup.controls['password']" [(ngModel)]="user.password"></ion-input>
+      </ion-item>
+      <div padding *ngIf="password.hasError('required') && password.touched">
+        <p id="err-msg">*Password is required</p>
+      </div>
+
+    </ion-list>
+    <button ion-button full color="primary" [disabled]="!formgroup.valid" (click)="register(user)"><ion-icon name="person-add"></ion-icon> Register</button>
+  </form>
+  
 </ion-content>

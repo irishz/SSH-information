@@ -14,8 +14,8 @@
 					<ion-input id="login-input" type="password" [(ngModel)]="user.password"></ion-input>
 				</ion-item>
 				
-				<button id="btnGroup" ion-button color="primary" (click)="login(user)"outline round>Login</button>
-				<button id="btnGroup" ion-button color="danger" (click)="register()" outline round>Sign Up</button>
+				<button id="btnGroup" ion-button color="primary" (click)="login(user)"outline round>Login<ion-icon name="checkmark-circle-outline"></ion-icon></button>
+				<button id="btnGroup" ion-button color="danger" (click)="register()" outline round>Register<ion-icon name="person-add"></ion-icon></button>
 			</ion-col>
 		</ion-row>
 	</ion-grid>

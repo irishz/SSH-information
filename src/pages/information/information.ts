@@ -1,4 +1,3 @@
-import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer';
 import { OutLinkPage } from './../out-link/out-link';
 import { InLinkPage } from './../in-link/in-link';
 import { MottoPage } from './../motto/motto';
@@ -20,24 +19,13 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 })
 export class InformationPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl:ToastController, private document: DocumentViewer) {
-  }
-
-  openLocalPdf() {
-    const options: DocumentViewerOptions = {
-      title: 'My PDF'
-    }
-    this.document.viewDocument('assets/Doctor.pdf', 'application/pdf', options);
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad InformationPage');
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl:ToastController) {
   }
 
   goHistory(){
     const toast = this.toastCtrl.create({
       message: 'History page!',
-      duration: 3000
+      duration: 2000
     });
     toast.present();
     this.navCtrl.push(HistoryPage);
@@ -46,7 +34,7 @@ export class InformationPage {
   goMotto(){
     const toast = this.toastCtrl.create({
       message: 'Motto page!',
-      duration: 3000
+      duration: 2000
     });
     toast.present();
     this.navCtrl.push(MottoPage);

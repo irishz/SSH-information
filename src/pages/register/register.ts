@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { User } from '../../models/user';
+import { Validators, FormBuilder, FormGroup, FormControl, AbstractControl } from '@angular/forms';
+import { ResetPasswordPage } from '../reset-password/reset-password';
 
 @IonicPage()
 @Component({
@@ -12,11 +14,24 @@ import { User } from '../../models/user';
 export class RegisterPage {
 
   user = {} as User;
+  formgroup: FormGroup;
+  email:AbstractControl;
+  password: AbstractControl;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private afAuth: AngularFireAuth,
-    public alertCtrl: AlertController) {
+    public alertCtrl: AlertController,
+    public formbuilder: FormBuilder) {
+
+      this.formgroup = this.formbuilder.group({
+        email:['',  Validators.compose([Validators.pattern('[A-Za-z0-9._%+-]{3,}@suksawathospital.com'), Validators.required])],
+        password:['', [Validators.required]]
+      });
+
+      this.email = this.formgroup.controls['email'];
+      this.password = this.formgroup.controls['password'];
+
   }
 
   alert(message: string) {
@@ -36,6 +51,11 @@ export class RegisterPage {
       .catch(error => {
         this.alert(error.message);
       })
+  }
+
+  reset(email: any){
+    this.afAuth.auth.sendPasswordResetEmail(email);
+    this.navCtrl.push(ResetPasswordPage);
   }
 
 }

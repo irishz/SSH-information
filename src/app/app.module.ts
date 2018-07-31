@@ -17,6 +17,7 @@ import { HistoryPage } from './../pages/history/history';
 import { MottoPage } from './../pages/motto/motto';
 import { OutLinkPage } from './../pages/out-link/out-link';
 import { InLinkPage } from './../pages/in-link/in-link';
+import { ResetPasswordPage } from './../pages/reset-password/reset-password';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,7 +26,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
-import { DocumentViewer } from '@ionic-native/document-viewer';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,8 @@ import { DocumentViewer } from '@ionic-native/document-viewer';
     HistoryPage,
     MottoPage,
     OutLinkPage,
-    InLinkPage
+    InLinkPage,
+    ResetPasswordPage
   ],
   imports: [
     BrowserModule,
@@ -66,15 +67,15 @@ import { DocumentViewer } from '@ionic-native/document-viewer';
     HistoryPage,
     MottoPage,
     OutLinkPage,
-    InLinkPage
+    InLinkPage,
+    ResetPasswordPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthProvider,
-    DocumentViewer
+    AuthProvider
   ]
 })
 export class AppModule {}
