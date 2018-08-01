@@ -18,11 +18,13 @@ import { AngularFireDatabase } from '../../../node_modules/angularfire2/database
 export class InLinkPage {
   maLinks: Observable<any[]>;
   itLinks: Observable<any[]>;
+  smcLinks: Observable<any[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private db:AngularFireDatabase) {
 
     this.maLinks = this.db.list('ma-link').valueChanges();
     this.itLinks = this.db.list('it-link').valueChanges();
+    this.smcLinks = this.db.list('smc-link').valueChanges();
 
   }
 

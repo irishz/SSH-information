@@ -1,3 +1,4 @@
+import { AngularFireDatabase } from 'angularfire2/database';
 import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
@@ -12,25 +13,29 @@ import { ResetPasswordPage } from '../reset-password/reset-password';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
+  checkRadio = true;
 
   user = {} as User;
   formgroup: FormGroup;
-  email:AbstractControl;
+  email: AbstractControl;
   password: AbstractControl;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private afAuth: AngularFireAuth,
     public alertCtrl: AlertController,
-    public formbuilder: FormBuilder) {
+    public formbuilder: FormBuilder,
+    private db: AngularFireDatabase
+  ) {
+    
 
-      this.formgroup = this.formbuilder.group({
-        email:['',  Validators.compose([Validators.pattern('[A-Za-z0-9._%+-]{3,}@suksawathospital.com'), Validators.required])],
-        password:['', [Validators.required]]
-      });
+    this.formgroup = this.formbuilder.group({
+      email: ['', Validators.compose([Validators.pattern('[A-Za-z0-9._%+-]{3,}@suksawathospital.com'), Validators.required])],
+      password: ['', [Validators.required]]
+    });
 
-      this.email = this.formgroup.controls['email'];
-      this.password = this.formgroup.controls['password'];
+    this.email = this.formgroup.controls['email'];
+    this.password = this.formgroup.controls['password'];
 
   }
 
@@ -43,7 +48,7 @@ export class RegisterPage {
     this.navCtrl.push(LoginPage);
   }
 
-  async register(user: User) {
+  async register(user: User,newName: string) {
     await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password)
       .then(data => {
         this.alert('Registered!');
@@ -51,11 +56,11 @@ export class RegisterPage {
       .catch(error => {
         this.alert(error.message);
       })
-  }
 
-  reset(email: any){
-    this.afAuth.auth.sendPasswordResetEmail(email);
-    this.navCtrl.push(ResetPasswordPage);
+    // const itemsRef = this.db.list('employee');
+    // itemsRef.push({
+    //   name: newName,
+    // });
   }
 
 }

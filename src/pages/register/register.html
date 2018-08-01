@@ -22,9 +22,29 @@
 
   <form [formGroup]="formgroup">
     <ion-list>
+      <!-- <ion-item>
+        <ion-label stacked>Name</ion-label>
+        <ion-input id="input" type="text" #newName></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Position</ion-label>
+        <ion-input id="input" type="text" #newPosition></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Department</ion-label>
+        <ion-input id="input" type="text" #newDepartment></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked text-wrap>You are new employee? (Work less than 14 days.)</ion-label>
+        <ion-input id="input" type="text" #newType placeholder="Please type 'old' or 'new'"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Start Date</ion-label>
+        <ion-datetime displayFormat="MMM DD YYYY" #newStartdate></ion-datetime>
+      </ion-item> -->
 
       <ion-item>
-        <ion-label floating>Email Address</ion-label>
+        <ion-label stacked>Email Address</ion-label>
         <ion-input type="text" [formControl]="formgroup.controls['email']" [(ngModel)]="user.email"></ion-input>
       </ion-item>
       <div padding>
@@ -33,7 +53,7 @@
       </div>
 
       <ion-item>
-        <ion-label floating>Password</ion-label>
+        <ion-label stacked>Password</ion-label>
         <ion-input type="password" [formControl]="formgroup.controls['password']" [(ngModel)]="user.password"></ion-input>
       </ion-item>
       <div padding *ngIf="password.hasError('required') && password.touched">
@@ -41,7 +61,9 @@
       </div>
 
     </ion-list>
-    <button ion-button full color="primary" [disabled]="!formgroup.valid" (click)="register(user)"><ion-icon name="person-add"></ion-icon> Register</button>
+
+    <button ion-button full color="primary" [disabled]="!formgroup.valid" (click)="register(user)">
+      <ion-icon name="person-add"></ion-icon> Register</button>
   </form>
-  
+
 </ion-content>

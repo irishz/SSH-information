@@ -15,10 +15,7 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item (click)="detail(item)" id="avatar" *ngFor="let item of items | async">
-      <ion-avatar item-start>
-        <img src="{{item.image}}">
-      </ion-avatar>
+    <ion-item id="avatar" *ngFor="let item of items | async">
       <h2><b>{{item.name}}</b></h2>
       <h3><b>Position:</b> {{item.position}}</h3>
       <h3><b>Department:</b> {{item.department}}</h3>
