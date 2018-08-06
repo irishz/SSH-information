@@ -1,8 +1,8 @@
-import { EmployeeDetailPage } from './../employee-detail/employee-detail';
+import { EmployeeDetailPage } from '../employee-detail/employee-detail';
 import { Observable } from 'rxjs/Observable';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
-import { AngularFireDatabase } from '../../../node_modules/angularfire2/database';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular/umd';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 
 @IonicPage()

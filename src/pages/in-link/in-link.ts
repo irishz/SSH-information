@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs/Observable';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AngularFireDatabase } from '../../../node_modules/angularfire2/database';
+import { IonicPage, NavController, NavParams } from 'ionic-angular/umd';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 /**
  * Generated class for the InLinkPage page.

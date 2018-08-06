@@ -1,8 +1,8 @@
-import { RegisterPage } from './../register/register';
+import { RegisterPage } from '../register/register';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular/umd';
 import { User } from '../../models/user';
-import { AngularFireAuth } from '../../../node_modules/angularfire2/auth';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { HomePage } from '../home/home';
 
 
