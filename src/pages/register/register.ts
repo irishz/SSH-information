@@ -1,4 +1,3 @@
-import { AngularFireDatabase } from 'angularfire2/database';
 import { LoginPage } from '../login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular/umd';
@@ -23,11 +22,8 @@ export class RegisterPage {
     public navParams: NavParams,
     private afAuth: AngularFireAuth,
     public alertCtrl: AlertController,
-    public formbuilder: FormBuilder,
-    private db: AngularFireDatabase
+    public formbuilder: FormBuilder
   ) {
-    
-
     this.formgroup = this.formbuilder.group({
       email: ['', Validators.compose([Validators.pattern('[A-Za-z0-9._%+-]{3,}@suksawathospital.com'), Validators.required])],
       password: ['', Validators.compose([Validators.minLength(6), Validators.required])]
@@ -35,7 +31,6 @@ export class RegisterPage {
 
     this.email = this.formgroup.controls['email'];
     this.password = this.formgroup.controls['password'];
-
   }
 
   alert(message: string) {
