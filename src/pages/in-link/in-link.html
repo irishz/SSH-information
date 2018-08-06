@@ -23,12 +23,4 @@
       <u>{{maLink.title}}</u>
     </a>
   </ion-list>
-
-  <!-- SMC Link -->
-  <ion-list-header>SMC Link(ศูนย์คุณภาพ)</ion-list-header>
-  <ion-list *ngFor="let smcLink of smcLinks | async">
-    <a ion-item href="{{smcLink.url}}" text-wrap>
-      <u>{{smcLink.title}}</u>
-    </a>
-  </ion-list>
 </ion-content>

@@ -11,17 +11,17 @@ import { Validators, FormBuilder, FormGroup, AbstractControl } from '@angular/fo
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-  checkRadio = true;
 
   user = {} as User;
   formgroup: FormGroup;
-  email: AbstractControl;
+  email:AbstractControl;
   password: AbstractControl;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private afAuth: AngularFireAuth,
     public alertCtrl: AlertController,
+
     public formbuilder: FormBuilder
   ) {
     this.formgroup = this.formbuilder.group({
@@ -31,6 +31,7 @@ export class RegisterPage {
 
     this.email = this.formgroup.controls['email'];
     this.password = this.formgroup.controls['password'];
+
   }
 
   alert(message: string) {
@@ -42,7 +43,7 @@ export class RegisterPage {
     this.navCtrl.push(LoginPage);
   }
 
-  async register(user: User,newName: string) {
+  async register(user: User) {
     await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password)
       .then(data => {
         this.alert('Registered!');
@@ -50,11 +51,6 @@ export class RegisterPage {
       .catch(error => {
         this.alert(error.message);
       })
-
-    // const itemsRef = this.db.list('employee');
-    // itemsRef.push({
-    //   name: newName,
-    // });
   }
 
 }

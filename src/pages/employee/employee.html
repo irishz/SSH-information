@@ -7,7 +7,8 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title><ion-icon name="contacts"></ion-icon> New Employee</ion-title>
+    <ion-title>
+      <ion-icon name="contacts"></ion-icon> New Employee</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,10 +16,16 @@
 
 <ion-content padding>
   <ion-list>
+
     <ion-item *ngFor="let item of items | async">
-      <h2><b>{{item.name}}</b></h2>
-      <h3><b>Position:</b> {{item.position}}</h3>
-      <h3><b>Department:</b> {{item.department}}</h3>
+
+      <h2>
+        <b>{{item.name}}</b>
+      </h2>
+      <h3>
+        <b>Position:</b> {{item.position}}</h3>
+      <h3>
+        <b>Department:</b> {{item.department}}</h3>
       <ion-note item-end>{{item.startdate}}</ion-note>
     </ion-item>
   </ion-list>
