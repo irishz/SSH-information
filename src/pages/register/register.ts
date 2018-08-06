@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { User } from '../../models/user';
-import { Validators, FormBuilder, FormGroup, FormControl, AbstractControl } from '@angular/forms';
-import { ResetPasswordPage } from '../reset-password/reset-password';
+import { Validators, FormBuilder, FormGroup, AbstractControl } from '@angular/forms';
 
 @IonicPage()
 @Component({
@@ -31,7 +30,7 @@ export class RegisterPage {
 
     this.formgroup = this.formbuilder.group({
       email: ['', Validators.compose([Validators.pattern('[A-Za-z0-9._%+-]{3,}@suksawathospital.com'), Validators.required])],
-      password: ['', [Validators.required]]
+      password: ['', Validators.compose([Validators.minLength(6), Validators.required])]
     });
 
     this.email = this.formgroup.controls['email'];

@@ -56,8 +56,9 @@
         <ion-label stacked>Password</ion-label>
         <ion-input type="password" [formControl]="formgroup.controls['password']" [(ngModel)]="user.password"></ion-input>
       </ion-item>
-      <div padding *ngIf="password.hasError('required') && password.touched">
-        <p id="err-msg">*Password is required</p>
+      <div padding>
+        <p id="err-msg" *ngIf="password.hasError('required') && password.touched">*Password is required</p>
+        <p id="err-msg" *ngIf="formgroup.controls['password'].errors && formgroup.controls['password'].dirty">*Password must be at least 6 characters</p>
       </div>
 
     </ion-list>
