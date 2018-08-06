@@ -1,23 +1,21 @@
 import { config } from './app.firebase.config';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular/umd';
 import { MyApp } from './app.component';
 
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { LoginPage } from '../pages/login/login';
-import { RegisterPage } from '../pages/register/register';
-import { DataPage } from '../pages/data/data';
-import { EmployeePage } from '../pages/employee/employee';
-import { InformationPage } from '../pages/information/information';
-import { SurveyPage } from '../pages/survey/survey';
-import { EmployeeDetailPage } from '../pages/employee-detail/employee-detail';
-import { HistoryPage } from './../pages/history/history';
-import { MottoPage } from './../pages/motto/motto';
-import { OutLinkPage } from './../pages/out-link/out-link';
-import { InLinkPage } from './../pages/in-link/in-link';
-import { ResetPasswordPage } from './../pages/reset-password/reset-password';
+// import { LoginPage } from '../pages/login/login';
+// import { RegisterPage } from '../pages/register/register';
+// import { EmployeePage } from '../pages/employee/employee';
+// import { InformationPage } from '../pages/information/information';
+// import { SurveyPage } from '../pages/survey/survey';
+// import { EmployeeDetailPage } from '../pages/employee-detail/employee-detail';
+// import { HistoryPage } from '../pages/history/history';
+// import { MottoPage } from '../pages/motto/motto';
+// import { OutLinkPage } from '../pages/out-link/out-link';
+// import { InLinkPage } from '../pages/in-link/in-link';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -32,18 +30,16 @@ import { AuthProvider } from '../providers/auth/auth';
     MyApp,
     HomePage,
     TabsPage,
-    LoginPage,
-    RegisterPage,
-    DataPage,
-    EmployeePage,
-    InformationPage,
-    SurveyPage,
-    EmployeeDetailPage,
-    HistoryPage,
-    MottoPage,
-    OutLinkPage,
-    InLinkPage,
-    ResetPasswordPage
+    // LoginPage,
+    // RegisterPage,
+    // EmployeePage,
+    // InformationPage,
+    // SurveyPage,
+    // EmployeeDetailPage,
+    // HistoryPage,
+    // MottoPage,
+    // OutLinkPage,
+    // InLinkPage,
   ],
   imports: [
     BrowserModule,
@@ -57,18 +53,16 @@ import { AuthProvider } from '../providers/auth/auth';
     MyApp,
     HomePage,
     TabsPage,
-    LoginPage,
-    RegisterPage,
-    DataPage,
-    EmployeePage,
-    InformationPage,
-    SurveyPage,
-    EmployeeDetailPage,
-    HistoryPage,
-    MottoPage,
-    OutLinkPage,
-    InLinkPage,
-    ResetPasswordPage
+    // LoginPage,
+    // RegisterPage,
+    // EmployeePage,
+    // InformationPage,
+    // SurveyPage,
+    // EmployeeDetailPage,
+    // HistoryPage,
+    // MottoPage,
+    // OutLinkPage,
+    // InLinkPage,
   ],
   providers: [
     StatusBar,

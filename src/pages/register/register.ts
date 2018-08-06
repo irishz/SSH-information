@@ -1,7 +1,7 @@
 import { AngularFireDatabase } from 'angularfire2/database';
-import { LoginPage } from './../login/login';
+import { LoginPage } from '../login/login';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular/umd';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { User } from '../../models/user';
 import { Validators, FormBuilder, FormGroup, AbstractControl } from '@angular/forms';

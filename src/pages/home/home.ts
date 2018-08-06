@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular/umd';
 import { TabsPage } from '../tabs/tabs';
 
 @Component({

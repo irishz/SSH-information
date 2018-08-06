@@ -1,9 +1,9 @@
-import { OutLinkPage } from './../out-link/out-link';
-import { InLinkPage } from './../in-link/in-link';
-import { MottoPage } from './../motto/motto';
-import { HistoryPage } from './../history/history';
+import { OutLinkPage } from '../out-link/out-link';
+import { InLinkPage } from '../in-link/in-link';
+import { MottoPage } from '../motto/motto';
+import { HistoryPage } from '../history/history';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular/umd';
 
 /**
  * Generated class for the InformationPage page.
